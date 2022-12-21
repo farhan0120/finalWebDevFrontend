@@ -1,25 +1,56 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import "../App.css";
+import { AddButton, AddLink, BackButton, DeleteButton, FormButton, NormButton, SmallButton } from "../buttons";
 
 const AllEmployeesView = (props) => {
+  let {employees, deleteEmployee} = props;
+
   if (!props.allEmployees.length) {
-    return <div>There are no Employees.</div>;
+    return (
+    <div>
+      <BackButton to={`/`}>
+        Back
+      </BackButton>
+      <div className="header">
+        Employees
+      </div>
+      <p>There are no Employees.</p>
+      <AddLink to={`/newemployee`}>
+        Add New Employee
+      </AddLink>
+    </div>);
+
   }
 
   return (
     <div>
+      <BackButton to={`/`}>
+        Back
+      </BackButton>
+      <div className="header">
+        Employees
+      </div>
+      
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + " " + employee.lastname;
         return (
-          <div key={employee.id}>
-          <Link to={`/employee/${employee.id}`}>
-            <h1>{name}</h1>
-          </Link>
-          <p>{employee.department}</p>
-        </div>
+            <div key={employee.id}>
+            <Link to={`/employee/${employee.id}`}>
+              <div className="name">{name} (id: {employee.id})</div>
+            </Link>
+            <br></br>
+            <div className="department">Department: {employee.department}</div>
+            <br></br>
+            <DeleteButton onClick={() => deleteEmployee(employee.id)}>Delete Employee</DeleteButton>
+            </div>
         );
 
-      })}
+      })}  
+      <br/>
+      <AddLink to={`/newemployee`}>
+        Add New Employee
+      </AddLink>
     </div>
   );
 };

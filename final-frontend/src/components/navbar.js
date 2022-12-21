@@ -10,10 +10,10 @@ const Navbar = () => {
     <>
       <Nav>
         <NavLogo to='/'>
-          <img src={require('../images/logo.png')} alt='logo' height="38" />
+          <img src={require('../images/logo.png')} alt='logo' height="25" />
         </NavLogo>
         <NavTitle to='/'>
-          <img src={require('../images/name.png')} alt='logo' height="28" />
+          <img src={require('../images/name.png')} alt='logo' height="25" />
         </NavTitle>
       </Nav>
     </>

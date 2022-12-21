@@ -1,38 +1,109 @@
-.App {
+
+
+.container {
+  display: flex;
+  height: 100%;
+  margin: 95px 3% 3% 3%;
+  font-family: 'Catamaran', sans-serif;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 100%;
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.name:hover {
+  text-decoration: underline;
+}
+
+.inactive_name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.department {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: -8px;
+  width: 100%;
+}
+
+.tasks {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+.assigned {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  margin-right: 5px;
+  float: left;
+}
+
+p {
+  font-size: 20px;
+}
+
+form {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  font-size: 16px;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 500;
+  padding: 1px 8px;
+  margin-left: 5px;
+  border-radius: 8px;
+  border: 2px solid gray;
+  margin-bottom: 18px;
+}
+
+.links_container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a:link { 
+  text-decoration: none; 
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover { 
+  text-decoration: underline; 
+  color: black;
+}
+
+a:visited { 
+  text-decoration: none; 
+  color: black;
+}
+
+a:active { 
+  text-decoration: none; 
 }

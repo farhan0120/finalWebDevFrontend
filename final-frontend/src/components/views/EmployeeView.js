@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AddButton, BackButton, FormButton, NormButton, PlusButton, SmallButton, TaskLink, XButton } from "../buttons";
 
 
 const EmployeeView = (props) => {
@@ -8,8 +9,11 @@ const EmployeeView = (props) => {
   
   return (
     <div>      
-      <h1>{employee.firstname}</h1>
-      <h3>{employee.department}</h3>
+      <br/><br/>
+      <br/><br/>
+      <div className="inactive_name">{employee.firstname} {employee.lastname} (id: {employee.id})</div> 
+      <br/><br/>
+      <div className="department">Department: {employee.department}</div>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned tasks:
         {assignedTasks.map( task => {
@@ -33,11 +37,13 @@ const EmployeeView = (props) => {
             </div>
           );
         })}</div>
-
       </div>
-
-  
+      <BackButton to={`/employees`}>
+        Back
+      </BackButton>
+      <SmallButton to={`/editemployee/${employee.id}`}>Edit employee information</SmallButton>
     </div>
+    
   );
 
 };
